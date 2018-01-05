@@ -38,7 +38,9 @@ public class FactsActivity extends AppCompatActivity {
 
                 // change the text to display it
                 factTextView.setText(fact);
-                background.setBackgroundColor(wheel.getColor());
+                int color = wheel.getColor();
+                background.setBackgroundColor(color);
+                showFactButton.setTextColor(color);
             }
         };
 

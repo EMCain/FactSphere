@@ -6,7 +6,7 @@
     android:background="#51b46d"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="50dp"
+    android:padding="10dp"
     tools:context="io.github.emcain.factsphere.FactsActivity">
 
     <TextView
@@ -18,29 +18,40 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/textView" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_below="@+id/textView"
+        android:src="@drawable/fact_core"
+        android:contentDescription="an image of the Fact Core from Portal 2: a robotic sphere glowing with purple light" />
 
     <TextView
         android:id="@+id/factTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="12dp"
-        android:layout_marginStart="12dp"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="46dp"
         android:text="The Fact Sphere is not defective. Its facts are wholly accurate and very interesting."
         android:textColor="@android:color/background_light"
-        android:textSize="32sp" />
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/showFactButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/factTextView"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="36dp"
-        android:text="Next Fact" />
+        android:layout_alignStart="@+id/factTextView"
+        android:text="Next Fact"
+        android:textColor="#51b46d" />
+
 
 </RelativeLayout>
